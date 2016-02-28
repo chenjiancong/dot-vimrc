@@ -14,7 +14,7 @@ syntax on
 "--------
 " color scheme
 set background=dark
-color solarized
+color fisa
 
 " highlight current line
 au WinLeave * set nocursorline nocursorcolumn
@@ -266,3 +266,26 @@ if has("gui_running")
     map <D-9> 9gt
     map <D-0> :tablast<CR>
 endif
+
+"Tmux color
+if exists('$TMUX')
+    set term=screen-256color
+endif
+
+"Tmux 光标模式
+if exists('$ITERM_PROFILE')
+  if exists('$TMUX')
+    let &amp;t_SI = "<Esc>[3 q"
+    let &amp;t_EI = "<Esc>[0 q"
+  else
+    let &amp;t_SI = "<Esc>]50;CursorShape=1x7"
+    let &amp;t_EI = "<Esc>]50;CursorShape=0x7"
+  endif
+end
+
+"文件中快速跳转
+nnoremap <CR> G
+nnoremap <BS> gg
+
+"用jj取代ESC键
+inoremap jj <ESC>
