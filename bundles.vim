@@ -13,9 +13,10 @@ Bundle 'gmarik/vundle'
 "------------------
 Bundle 'Shougo/neocomplcache'
 Bundle 'mattn/emmet-vim'
+"自动匹配括号
 Bundle 'Raimondi/delimitMate'
 Bundle 'ervandew/supertab'
-" snippets
+" snippets C/C++ 输入inc 按TAB键自动完整
 Bundle 'garbas/vim-snipmate'
 Bundle 'honza/vim-snippets'
 "------ snipmate dependencies -------
@@ -32,10 +33,13 @@ Bundle 'Lokaltog/vim-easymotion'
 " Fast editing
 "--------------
 Bundle 'tpope/vim-surround'
+"注释插件
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'sjl/gundo.vim'
 Bundle 'godlygeek/tabular'
+"垂直对齐线
 Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'Yggdroot/indentLine'
 
 "--------------
 " IDE features
@@ -44,12 +48,14 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'humiaozuzu/TabBar'
 Bundle 'majutsushi/tagbar'
 Bundle 'mileszs/ack.vim'
+"快速查找项目中文件
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-powerline'
+"静态代码分析
 Bundle 'scrooloose/syntastic'
+"标志无效空格
 Bundle 'bronson/vim-trailing-whitespace'
-Bundle 'Yggdroot/indentLine'
 
 "-------------
 " Other Utils
@@ -65,6 +71,11 @@ Bundle '2072/PHP-Indenting-for-VIm'
 "Bundle 'tpope/vim-rails'
 Bundle 'lepture/vim-jinja'
 "Bundle 'digitaltoad/vim-jade'
+
+"python syntax highlight
+Bundle 'hdima/python-syntax'
+"python 补全
+Bundle "davidhalter/jedi"
 
 "------- web frontend ----------
 Bundle 'othree/html5.vim'
@@ -87,6 +98,7 @@ Bundle 'tpope/vim-markdown'
 Bundle 'fatih/vim-go'
 
 "------- FPs ------
+"括号高亮
 Bundle 'kien/rainbow_parentheses.vim'
 " Bundle 'wlangstroth/vim-racket'
 " Bundle 'vim-scripts/VimClojure'
