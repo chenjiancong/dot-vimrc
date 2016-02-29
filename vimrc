@@ -14,7 +14,10 @@ syntax on
 "--------
 " color scheme
 set background=dark
-color fisa
+color molokai
+let g:molokai_original = 1
+let g:rehash256 = 1
+
 
 " highlight current line
 au WinLeave * set nocursorline nocursorcolumn
