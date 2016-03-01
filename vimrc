@@ -19,7 +19,7 @@ let g:molokai_original = 1
 let g:rehash256 = 1
 
 
-" highlight current line 突出显现当行
+" highlight current line 突出显现当行/列
 au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline cursorcolumn
 set cursorline cursorcolumn
@@ -41,7 +41,9 @@ set mouse=a                                                       " use mouse in
 set report=0                                                      " always report number of lines changed                "
 set nowrap                                                        " dont wrap lines
 set scrolloff=5                                                   " 5 lines above/below cursor when scrolling
-set number                                                        " show line numbers
+set number
+"相对行号
+set relativenumber                                                        " show line numbers
 set showmatch                                                     " show matching bracket (briefly jump)
 set showcmd                                                       " show typed command in status bar
 set title                                                         " show file in titlebar
@@ -234,7 +236,7 @@ autocmd BufReadPost *
       \     endif |
       \ endif
 
-" w!! to sudo & write a file
+" w!! to sudo & write a file 强制保存
 cmap w!! %!sudo tee >/dev/null %
 
 " Quickly edit/reload the vimrc file
@@ -295,8 +297,8 @@ if exists('$ITERM_PROFILE')
 end
 
 "文件中快速跳转
-nnoremap <CR> G
-nnoremap <BS> gg
+nnoremap <CR> G                  "跳转末行
+nnoremap <BS> gg                 "跳转道行
 
 "用jj取代ESC键
 inoremap jj <ESC>
@@ -306,23 +308,6 @@ let python_highlight_all = 1
 
 "关闭交换文件
 set noswapfile
-
-" 相对行号      行号变成相对，可以用 nj  nk   进行跳转 5j   5k 上下跳5行
-set relativenumber number
-au FocusLost * :set norelativenumber number
-au FocusGained * :set relativenumber
-" 插入模式下用绝对行号, 普通模式下用相对
-autocmd InsertEnter * :set norelativenumber number
-autocmd InsertLeave * :set relativenumber
-function! NumberToggle()
-
-  if(&relativenumber == 1)
-    set norelativenumber number
-  else
-    set relativenumber
-  endif
-endfunc
-nnoremap <C-n> :call NumberToggle()<cr>
 
 autocmd! bufwritepost .vimrc source % " vimrc文件修改之后自动加载。 linux
 
@@ -391,7 +376,8 @@ highlight SpellRare term=underline cterm=underline
 highlight clear SpellLocal
 highlight SpellLocal term=underline cterm=underline
 
-"禁用syntastic检查python
+"禁用ll
+"syntastic检查python
 let g:syntastic_ignore_files=[".*\.py$"]
 
 "取消F1帮助提示

@@ -77,7 +77,6 @@ Bundle 'hdima/python-syntax'
 "python 补全
 Bundle "davidhalter/jedi"
 
-
 "------- web frontend ----------
 Bundle 'othree/html5.vim'
 " Bundle 'tpope/vim-haml'
