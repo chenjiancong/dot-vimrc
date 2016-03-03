@@ -285,16 +285,16 @@ if exists('$TMUX')
     set term=screen-256color
 endif
 
-"Tmux 光标模式
-if exists('$ITERM_PROFILE')
-  if exists('$TMUX')
-    let &amp;t_SI = "<Esc>[3 q"
-    let &amp;t_EI = "<Esc>[0 q"
-  else
-    let &amp;t_SI = "<Esc>]50;CursorShape=1x7"
-    let &amp;t_EI = "<Esc>]50;CursorShape=0x7"
-  endif
-end
+" " "Tmux 光标模式
+ " if exists('$ITERM_PROFILE')
+   " if exists('$TMUX')
+     " let &amp;t_SI = "<Esc>[3 q"
+     " let &amp;t_EI = "<Esc>[0 q"
+   " else
+     " let &amp;t_SI = "<Esc>]50;CursorShape=1x7"
+     " let &amp;t_EI = "<Esc>]50;CursorShape=0x7"
+   " endif
+ " end
 
 "文件中快速跳转
 nnoremap <CR> G                  "跳转末行
