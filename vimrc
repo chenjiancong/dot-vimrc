@@ -287,7 +287,7 @@ endif
 
 "文件中快速跳转
 nnoremap <CR> G                  "跳转末行
-nnoremap <BS> gg                 "跳转道行
+nnoremap <BS> gg                 "跳转首行
 
 "用jj取代ESC键
 inoremap jj <ESC>
