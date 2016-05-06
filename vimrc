@@ -18,11 +18,13 @@ color molokai
 let g:molokai_original = 1
 let g:rehash256 = 1
 
-
 " highlight current line 突出显现当行/列
 au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline cursorcolumn
 set cursorline cursorcolumn
+
+"对齐线(方块)
+let g:indent_guides_enable_on_vim_startup = 1
 
 " search
 set incsearch
