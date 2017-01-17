@@ -49,7 +49,7 @@ syntax on
 set hlsearch
 " 打开增量搜索模式，随着键入即时搜索
 set incsearch
-" 扫过时忽略大小定
+" 搜索时忽略大小定
 set ignorecase
 " 有一个或以上大写字母时仍大小写敏感
 set smartcase
@@ -75,7 +75,7 @@ hi! link SignColumn   LineNr
 hi! link ShowMarksHLl DiffAdd
 hi! link ShowMarksHLu DiffChange
 
-" for error highlight，防止错误整行标红导致看不清
+" 防止错误整行标红导致看不清, for error highlight
 highlight clear SpellBad
 highlight SpellBad term=standout ctermfg=1 term=underline cterm=underline
 highlight clear SpellCap
@@ -133,9 +133,6 @@ function! NumberToggle()
   endif
 endfunc
 nnoremap <C-n> :call NumberToggle()<cr>
-
-"对齐线(方块)
-let g:indent_guides_enable_on_vim_startup = 1
 
 " history存储容量
 set history=2000
@@ -196,6 +193,10 @@ let g:html_indent_style1 = "inc"
 "-----------------
 " 插件设置 Plugin settings
 "-----------------
+
+"对齐线(方块)
+let g:indent_guides_enable_on_vim_startup = 1
+
 " Rainbow parentheses for Lisp and variants 括号自动高亮
 let g:rbpt_colorpairs = [
     \ ['brown',       'RoyalBlue3'],
@@ -276,7 +277,7 @@ let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
 let NERDTreeShowBookmarks=1
 let NERDTreeWinPos = "right"
 
-" nerdcommenter
+" nerdcommenter ,shift + v 选中; leader + cc 注释； leader + cu 取消注释
 let NERDSpaceDelims=1
 " nmap <D-/> :NERDComToggleComment<cr>
 let NERDCompactSexyComs=1
@@ -335,16 +336,16 @@ set pastetoggle=<F2>
 " F3
 nmap <F3> :GundoToggle<cr>
 
-" F4 显示垂直对方线
+" F4 显示垂直对齐线
 nmap <F4> :IndentGuidesToggle<cr>
 
-" F5 显示函数
+" F5 开关标签导航
 nmap <F5> :TagbarToggle<cr>
 
-" F6 显示当前目录文件
+" F6 开关目录树导航
 nmap <F6> :NERDTreeToggle<cr>
 
-" F7 为方便复制，用<F7>开启/关闭行号显示:
+" F7 开关行号显示，方便复制
 function! HideNumber()
   if(&relativenumber == &number)
     set relativenumber! number!
@@ -357,8 +358,12 @@ function! HideNumber()
 endfunc
 nnoremap <F7> :call HideNumber()<CR>
 
-" F8开关语法高亮
+" F8 开关语法高亮
 nnoremap <F8> :exec exists('syntax_on') ? 'syn off' : 'syn on'<CR>
+
+" F9 开关鼠标显示
+"nmap <F9> :togglemouse<cr>
+" 想不出如何重新映射热键，只能修改vim-togglemouse/plugin里的文件
 
 " F10 执行python F10 to run python script
 nnoremap <buffer> <F10> :exec '!python' shellescape(@%, 1)<cr>
@@ -463,5 +468,3 @@ function! AutoSetFileHead()
     normal o
     normal o
 endfunc
-
-#END
