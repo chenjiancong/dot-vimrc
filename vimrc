@@ -333,7 +333,7 @@ noremap <F1> <Esc>
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 
-" F3
+" F3 GundoToggle
 nmap <F3> :GundoToggle<cr>
 
 " F4 显示垂直对齐线
