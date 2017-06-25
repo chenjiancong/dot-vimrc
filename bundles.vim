@@ -94,7 +94,9 @@ Bundle 'kien/rainbow_parentheses.vim'
 "--------------
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tomasr/molokai'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'powerline/powerline'
+"Bundle 'Lokaltog/vim-powerline'
+"Bundle 'powerline/powerline'
+Bundle 'vim-airline/vim-airline'
+Bundle 'vim-airline/vim-airline-themes'
 
 filetype plugin indent on     " required!

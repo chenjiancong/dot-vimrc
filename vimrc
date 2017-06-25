@@ -289,9 +289,15 @@ let NERDCompactSexyComs=1
 let g:user_emmet_expandabbr_key='<C-j>'
 
 " powerline
-let g:Powerline_symbols = 'fancy'
-set encoding=utf-8
-set guifont=Consolas\ for\ Powerline\ FixedD:h11
+"let g:Powerline_symbols = 'fancy'
+"set encoding=utf-8
+"set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11  "config font for gvim  ”for gvim"
+"set guifont=Consolas\ for\ Powerline\ FixedD:h11
+
+" airline
+set laststatus=2
+"let g:airline_theme='solarized'
+"let g:airline_powerline_fonts=1
 
 " NeoComplCache
 let g:neocomplcache_enable_at_startup=1
