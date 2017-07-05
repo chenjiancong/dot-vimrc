@@ -296,7 +296,7 @@ let g:user_emmet_expandabbr_key='<C-j>'
 
 " airline
 set laststatus=2
-"let g:airline_theme='solarized'
+let g:airline_theme='solarized'
 "let g:airline_powerline_fonts=1
 
 " NeoComplCache
