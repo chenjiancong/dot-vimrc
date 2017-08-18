@@ -57,6 +57,10 @@ set ignorecase
 " 有一个或以上大写字母时仍大小写敏感
 set smartcase
 
+" 折叠代码
+au BufWinLeave * silent mkview
+au BufWinEnter * silent loadview
+
 "==========================================
 " Theme Settings  主题设置
 "==========================================
