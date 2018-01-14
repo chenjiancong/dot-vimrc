@@ -54,6 +54,11 @@ Bundle 'mileszs/ack.vim'
 "快速查找项目中文件
 Bundle 'kien/ctrlp.vim'
 
+" 自动格式化代码（调用autopep8进行格式化）
+" 需要先安装autopep8
+" pip install autopep8
+Bundle 'Chiel92/vim-autoformat'
+
 Bundle 'tpope/vim-fugitive'
 
 "静态代码分析
@@ -94,8 +99,6 @@ Bundle 'kien/rainbow_parentheses.vim'
 "--------------
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tomasr/molokai'
-"Bundle 'Lokaltog/vim-powerline'
-"Bundle 'powerline/powerline'
 Bundle 'vim-airline/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
 

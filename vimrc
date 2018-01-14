@@ -300,7 +300,7 @@ let g:user_emmet_expandabbr_key='<C-j>'
 
 " airline
 set laststatus=2
-let g:airline_theme='solarized'
+"let g:airline_theme='solarized'
 "let g:airline_powerline_fonts=1
 
 " NeoComplCache
@@ -374,9 +374,11 @@ nnoremap <F7> :call HideNumber()<CR>
 " F8 开关语法高亮
 nnoremap <F8> :exec exists('syntax_on') ? 'syn off' : 'syn on'<CR>
 
-" F9 开关鼠标显示
-"nmap <F9> :togglemouse<cr>
-" 想不出如何重新映射热键，只能修改vim-togglemouse/plugin里的文件
+" F9 自动格式化编码为 autopep8
+nnoremap <F9> :Autoformat<CR>
+let g:autoformat_autoindent = 0
+let g:autoformat_retab = 0
+let g:autoformat_remove_trailing_spaces = 0
 
 " F10 执行python F10 to run python script
 nnoremap <buffer> <F10> :exec '!python' shellescape(@%, 1)<cr>
