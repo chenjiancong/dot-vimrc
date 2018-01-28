@@ -107,7 +107,7 @@ setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
-setlocal statusline=%#airline_a#\ Tagbar\ %#airline_a_to_airline_b#%#airline_b#\ Order\ %#airline_b_to_airline_c#%#airline_c#\ test1.py\ 
+setlocal statusline=%#airline_a#\ Tagbar\ %#airline_a_to_airline_b#%#airline_b#\ Order\ %#airline_b_to_airline_c#%#airline_c#\ \ 
 setlocal suffixesadd=
 setlocal noswapfile
 setlocal synmaxcol=3000
@@ -125,12 +125,12 @@ setlocal nowinfixheight
 setlocal winfixwidth
 setlocal nowrap
 setlocal wrapmargin=0
-let s:l = 3 - ((2 * winheight(0) + 22) / 44)
+let s:l = 1 - ((0 * winheight(0) + 13) / 27)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-3
-normal! 02|
+1
+normal! 0
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 " vim: set ft=vim :

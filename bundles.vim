@@ -13,6 +13,7 @@ Bundle 'gmarik/vundle'
 "------------------
 Bundle 'Valloric/YouCompleteMe'
 "Bundle 'Shougo/neocomplcache'
+" 网页编辑
 Bundle 'mattn/emmet-vim'
 "自动匹配括号
 Bundle 'Raimondi/delimitMate'
@@ -58,7 +59,6 @@ Bundle 'kien/ctrlp.vim'
 " 需要先安装autopep8
 " pip install autopep8
 Bundle 'Chiel92/vim-autoformat'
-
 Bundle 'tpope/vim-fugitive'
 
 "静态代码分析
