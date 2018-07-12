@@ -3,14 +3,13 @@ argglobal
 let s:cpo_save=&cpo
 set cpo&vim
 imap <buffer> <S-BS> <Plug>delimitMateS-BS
-imap <buffer> <BS> <Plug>delimitMateBS
 nnoremap <buffer> <silent> ? :h vundle
 nnoremap <buffer> <silent> C :PluginClean!
 nnoremap <buffer> <silent> D :exec 'Delete'.getline('.')
 nnoremap <buffer> <silent> I :exec 'InstallAndRequire'.substitute(getline('.'), '^Plugin ', 'Plugin! ', '')
 nnoremap <buffer> <silent> R :call vundle#scripts#reload()
-nnoremap <buffer> <silent> add! :exec 'Install'.substitute(getline('.'), '^Plugin ', 'Plugin! ', '')
 nnoremap <buffer> <silent> add :exec 'Install'.getline('.')
+nnoremap <buffer> <silent> add! :exec 'Install'.substitute(getline('.'), '^Plugin ', 'Plugin! ', '')
 nnoremap <buffer> <silent> c :PluginClean
 nnoremap <buffer> <silent> h :h vundle
 nnoremap <buffer> <silent> i :exec 'InstallAndRequire'.getline('.')
@@ -19,7 +18,6 @@ nnoremap <buffer> <silent> q :silent bd!
 nnoremap <buffer> s :PluginSearch
 nnoremap <buffer> <silent> u :VundleChangelog
 imap <buffer> <silent> g <Plug>delimitMateJumpMany
-imap <buffer>  <Plug>delimitMateBS
 imap <buffer> " <Plug>delimitMate"
 imap <buffer> ' <Plug>delimitMate'
 imap <buffer> ( <Plug>delimitMate(
@@ -139,12 +137,12 @@ setlocal winfixheight
 setlocal nowinfixwidth
 setlocal nowrap
 setlocal wrapmargin=0
-let s:l = 42 - ((26 * winheight(0) + 13) / 27)
+let s:l = 31 - ((16 * winheight(0) + 14) / 28)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-42
-normal! 0
+31
+normal! 032|
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 " vim: set ft=vim :

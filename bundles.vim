@@ -89,8 +89,12 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'nono/jquery.vim'
 
 "------- markup language -------
+""高亮语法
 Bundle 'tpope/vim-markdown'
-
+"浏览器预览
+Bundle 'iamcco/markdown-preview.vim'
+"支持数学公式
+Bundle 'iamcco/mathjax-support-for-mkdp'
 " 括号高亮
 Bundle 'kien/rainbow_parentheses.vim'
 
