@@ -41,7 +41,7 @@ setlocal commentstring=/*%s*/
 setlocal complete=.,w,b,u,t,i
 setlocal concealcursor=inc
 setlocal conceallevel=2
-setlocal completefunc=youcompleteme#Complete
+setlocal completefunc=youcompleteme#CompleteFunc
 setlocal nocopyindent
 setlocal cryptmethod=
 setlocal nocursorbind
@@ -128,7 +128,7 @@ setlocal nowinfixwidth
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 149 - ((26 * winheight(0) + 13) / 27)
+let s:l = 149 - ((27 * winheight(0) + 14) / 28)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt

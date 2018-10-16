@@ -317,7 +317,7 @@ imap <C-l> <Plug>(neocomplcache_snippets_force_jump)
 smap <C-l> <Plug>(neocomplcache_snippets_force_jump)
 
 " Enable omni completion.
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+"autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
@@ -389,7 +389,7 @@ nnoremap <leader>a :Ack
 " 快速全选
 nnoremap <leader>v V`]
 
-""跳转最后一行
+"跳转最后一行
 nnoremap <CR> G
 "跳转首行
 nnoremap <BS> gg
