@@ -65,7 +65,7 @@ au BufWinEnter * silent loadview
 " Theme Settings  主题设置
 "==========================================
 syntax enable
-set background=dark
+"set background=dark
 set t_Co=256
 colorscheme solarized
 let g:molokai_original = 1
@@ -348,7 +348,8 @@ nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 
 " F3 GundoToggle
-nmap <F3> :GundoToggle<cr>
+" nmap <F3> :GundoToggle<cr>
+nmap <F3> :UndotreeToggle<cr>
 
 " F4 显示垂直对齐线
 nmap <F4> :IndentGuidesToggle<cr>

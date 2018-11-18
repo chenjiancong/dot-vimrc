@@ -37,7 +37,9 @@ Bundle 'terryma/vim-multiple-cursors'
 Bundle 'tpope/vim-surround'
 " 批量快速注释插件
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'sjl/gundo.vim'
+" 撤销退回
+"Bundle 'sjl/gundo.vim'
+Bundle 'mbbill/undotree'
 Bundle 'godlygeek/tabular'
 
 "垂直对齐线
