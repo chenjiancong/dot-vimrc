@@ -11,7 +11,7 @@ Bundle 'gmarik/vundle'
 "------------------
 " Code Completions
 "------------------
-Bundle 'Valloric/YouCompleteMe'
+"Bundle 'Valloric/YouCompleteMe'
 "Bundle 'Shougo/neocomplcache'
 " 网页编辑
 Bundle 'mattn/emmet-vim'

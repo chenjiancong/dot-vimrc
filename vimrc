@@ -65,7 +65,7 @@ au BufWinEnter * silent loadview
 " Theme Settings  主题设置
 "==========================================
 syntax enable
-"set background=dark
+set background=dark
 set t_Co=256
 colorscheme solarized
 let g:molokai_original = 1
